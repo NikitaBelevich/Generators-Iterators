@@ -108,3 +108,14 @@ for (const elem of obj6) {
     console.log(elem);
 }
 console.groupEnd('Task 6');
+
+
+// Task 7. Дан массив. Переберите элементы этого массива через цикл for-of так, чтобы в каждой итерации в переменную elem записывался элемент массива, а в переменную key - ключ.
+let arr7 = [3,'one', undefined, 324];
+let iter7 = arr7.entries();
+console.group('Task 7');
+console.log(arr7);
+for (const [key, value] of iter7) {
+    console.log(key, value);
+}
+console.groupEnd('Task 7');
