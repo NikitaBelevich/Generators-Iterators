@@ -88,3 +88,23 @@ for (const elem of iter5) {
 console.groupEnd('Task 5');
 
 
+//Task 6. Дан объект. Сделайте так, чтобы его элементы можно было перебрать с помощью цикла for-of.
+let obj6 = {
+    'name': 'object6',
+    'Task Number': 6,
+    alertHi() {
+        alert(`I'm object number 6`);
+    },
+    *[Symbol.iterator]() {
+        for (const key in this) {
+           yield this[key];
+        }
+    },
+};
+
+console.group('Task 6');
+console.log(obj6);
+for (const elem of obj6) {
+    console.log(elem);
+}
+console.groupEnd('Task 6');
