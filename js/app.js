@@ -119,3 +119,27 @@ for (const [key, value] of iter7) {
     console.log(key, value);
 }
 console.groupEnd('Task 7');
+
+// Task 8. Пусть дан объект. Создайте символ и добавьте в объект еще один элемент, ключом которого будет созданный символ, а значением - какая-нибудь строка. Переберите объект через цикл for-in, убедитесь в том, что новый элемент не появляется при переборе.
+let obj8 = {
+    1: 'a',
+    2: 'b',
+    3: 'c',
+};
+
+let sym8 = Symbol();
+obj8[sym8] = 'Hello';
+console.group('Task 8');
+for (const key in obj8) {
+    console.log(key);
+}
+console.groupEnd('Task 8');
+
+// Task 9. Пусть дан объект. Добавьте в него еще один элемент, значением которого будет функция, выводящая на экран '!', а ключом - созданный вами символ.
+let sym8Func = Symbol();
+obj8[sym8Func] = () => {console.error('warning!');};
+console.group('Task 9');
+console.log(obj8);
+console.groupEnd('Task 9');
+
+
